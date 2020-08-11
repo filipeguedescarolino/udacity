@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+
+        function desenharPizza() {
+
+            var tabela = new google.visualization.DataTable();
+            tabela.addColumn('string', 'categorias');
+            tabela.addColumn('number', 'valores');
+            tabela.addRows([
+
+                ['Golden Retriever', 2000],
+                ['German Shepperd', 3800],
+                ['Labrador', 230],
+                ['Caniche', 50],
+                ['Pincher', 900],
+                ['Shepperd', 260]
+            ]);
+
+            var grafico = new google.visualization.LineChart(document.getElementById('graficoPizza'));
+            grafico.draw(tabela);
+        }
+
+        google.charts.setOnLoadCallback(desenharPizza);
+    </script>
+</head>
+
+<body>
+    <div id="graficoPizza"></div>
+</body>
+
+</html>
