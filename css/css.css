@@ -1,0 +1,186 @@
+@import "all.min.css";
+@import "https://fonts.googleapis.com/css2?family=Red+Rose&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap";
+@import "post.css";
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #792b2b;
+    color: white;
+}
+
+header img {
+    float: right;
+    width: 100px;
+    height: 100px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "hd hd hd hd hd hd" "mc mc mc mc mc mc" "sc sc sc sc sc sc" "ft ft ft ft ft ft";
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: hd;
+    font-weight: 400;
+}
+
+.main-content {
+    grid-area: mc;
+}
+
+.side-content {
+    grid-area: sc;
+    background-color: white;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.about-me .portrait {
+    border-radius: 50%;
+    width: 40%;
+}
+
+.about-me p {
+    text-align: justify;
+    font-family: 'Red Rose', cursive;
+}
+
+footer {
+    grid-area: ft;
+    text-align: center;
+    background-color: white;
+    padding: 35px;
+    font-style: italic;
+    font-size: 17px;
+}
+
+body {
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(129, 25, 25);
+    margin: 10px;
+}
+
+.card {
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    padding: 5px;
+}
+
+.breaker {
+    border-bottom: solid rgba(129, 25, 25) 2px;
+    margin: 10px 50px;
+}
+
+.vertical-breaker {
+    border-right: solid rgba(129, 25, 25) 4px;
+    margin: 0px 40px
+}
+
+.transaction-list {
+    display: flex;
+    align-items: center;
+    list-style-type: square;
+    flex-direction: column
+}
+
+.transaction-list li {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-media i {
+    color: #792b2b;
+    margin-right: 8px;
+    margin-bottom: 25px;
+}
+
+.subscribe a {
+    width: 80%;
+}
+
+.button {
+    background-color: #792b2b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: "hd hd hd hd hd hd" "mc mc mc mc sc sc" "ft ft ft ft ft ft";
+        grid-gap: 20px;
+        padding: 20px;
+    }
+}
